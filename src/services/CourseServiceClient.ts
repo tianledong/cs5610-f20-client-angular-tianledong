@@ -25,7 +25,7 @@ export class CourseServiceClient {
       .then(response => response.json())
 
   updateCourse = (course) =>
-    fetch(`${courseUrl}/${course.id}`, {
+    fetch(`${courseUrl}/${course._id}`, {
       method: 'PUT',
       body: JSON.stringify(course),
       headers: {
