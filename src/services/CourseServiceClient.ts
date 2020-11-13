@@ -33,4 +33,8 @@ export class CourseServiceClient {
       }
     })
       .then(response => response.json())
+
+  findCourseById = (cid) =>
+    fetch(`${courseUrl}/${cid}`)
+      .then(response => response.json())
 }
