@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CourseViewerComponentComponent} from './course-viewer-component/course-viewer-component.component';
+import {CourseViewerComponent} from './course-viewer/course-viewer.component';
 
 const routes: Routes = [
-  {path: '', component: CourseViewerComponentComponent},
-  {path: '/table/courses', component: CourseViewerComponentComponent},
-  {path: '/:layout/courses/:cid/modules', component: CourseViewerComponentComponent},
-  {path: '/:layout/courses/:cid/modules/:mid/lessons', component: CourseViewerComponentComponent},
-  {path: '/:layout/courses/:cid/modules/:mid/lessons/:lid/topics', component: CourseViewerComponentComponent},
+  {path: '', component: CourseViewerComponent},
+  {path: 'table/courses', component: CourseViewerComponent},
+  {path: ':layout/courses/:cid/modules', component: CourseViewerComponent},
+  {path: ':layout/courses/:cid/modules/:mid/lessons', component: CourseViewerComponent},
+  {path: ':layout/courses/:cid/modules/:mid/lessons/:lid/topics', component: CourseViewerComponent},
 ];
 
 @NgModule({

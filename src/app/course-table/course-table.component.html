@@ -1,1 +1,9 @@
-<p>course-table works!</p>
+<ul class="list-group">
+  <li *ngFor="let course of courses"
+      [ngClass]="{'list-group-item-primary': course._id === courseId}"
+      class="list-group-item">
+    <a routerLink="/courses/{{course._id}}/modules">
+      {{course.title}}
+    </a>
+  </li>
+</ul>
