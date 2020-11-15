@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ModuleServiceClient} from '../../services/ModuleServiceClient';
 
@@ -20,9 +20,9 @@ export class ModuleListComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.moduleId = params.mid;
       this.courseId = params.cid;
-    });
-    this.moduleService.findModulesForCourse(this.courseId).then(modules => {
-      this.modules = modules;
+      this.moduleService.findModulesForCourse(this.courseId).then(modules => {
+        this.modules = modules;
+      });
     });
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {CourseServiceClient} from '../../services/CourseServiceClient';
 
@@ -18,9 +18,9 @@ export class CourseTableComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.courseId = params.cid;
-    });
 
-    this.courseService.findAllCourses()
-      .then(courses => this.courses = courses);
+      this.courseService.findAllCourses()
+        .then(courses => this.courses = courses);
+    });
   }
 }
