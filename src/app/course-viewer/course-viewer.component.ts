@@ -8,7 +8,7 @@ import {CourseServiceClient} from '../../services/CourseServiceClient';
   styleUrls: ['./course-viewer.component.css']
 })
 export class CourseViewerComponent implements OnInit {
-  public course;
+  public courseTitle;
 
   constructor(private activatedRoute: ActivatedRoute,
               private courseService: CourseServiceClient) {
@@ -19,7 +19,7 @@ export class CourseViewerComponent implements OnInit {
       const courseId = params.cid;
       if (courseId !==  undefined) {
         this.courseService.findCourseById(courseId).then(course =>
-          this.course = course);
+          this.courseTitle = course.title);
       }
     });
   }
