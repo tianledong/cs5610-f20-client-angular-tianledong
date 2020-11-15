@@ -4,10 +4,10 @@ import {CourseViewerComponentComponent} from './course-viewer-component/course-v
 
 const routes: Routes = [
   {path: '', component: CourseViewerComponentComponent},
-  {path: 'courses', component: CourseViewerComponentComponent},
-  {path: 'courses/:cid/modules', component: CourseViewerComponentComponent},
-  {path: 'courses/:cid/modules/:mid/lessons', component: CourseViewerComponentComponent},
-  {path: 'courses/:cid/modules/:mid/lessons/:lid/topics', component: CourseViewerComponentComponent},
+  {path: '/table/courses', component: CourseViewerComponentComponent},
+  {path: '/:layout/courses/:cid/modules', component: CourseViewerComponentComponent},
+  {path: '/:layout/courses/:cid/modules/:mid/lessons', component: CourseViewerComponentComponent},
+  {path: '/:layout/courses/:cid/modules/:mid/lessons/:lid/topics', component: CourseViewerComponentComponent},
 ];
 
 @NgModule({
