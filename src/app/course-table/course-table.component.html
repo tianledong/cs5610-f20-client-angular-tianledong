@@ -1,9 +1,9 @@
 <h3 class="text-light p-3">Courses</h3>
-<ul class="nav nav-pills nav-fill p-3 wbdv-module-list">
+<ul class="nav nav-pills nav-fill wbdv-module-list">
   <li *ngFor="let course of courses"
       [ngClass]="{'active': course._id === courseId}"
       class="nav-item nav-link d-flex w-100 m-2 wbdv-bg wbdv-module-item">
-    <a class="col-10 wbdv-module-item-title text-left wbdv-module-item-title"
+    <a class="col-12 wbdv-module-item-title text-left wbdv-module-item-title"
        [routerLink]="['/table/courses',course._id,'modules']">
       {{course.title}}
     </a>

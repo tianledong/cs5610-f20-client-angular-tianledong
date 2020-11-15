@@ -1,13 +1,25 @@
 <main class="row m-0 min-vh-100">
-  <div class="col-lg-3 col-md-4 col-sm-5 border-top border-bottom border-secondary bg-dark">
+  <div class="col-lg-2 col-md-3 col-sm-4 border-top border-bottom border-secondary bg-dark">
     <app-course-table></app-course-table>
   </div>
-  <div class="col-lg-9 col-md-8 col-sm-7 p-0">
-    <div class="col-lg-3 col-md-4 col-sm-5 border-top border-bottom border-secondary">
-      <app-module-list></app-module-list>
-    </div>
-    <div class="col-lg-9 col-md-8 col-sm-7 bg-white">
-      <app-lesson-tabs></app-lesson-tabs>
+  <div class="col-lg-10 col-md-9 row-col-sm-8 p-0">
+    <nav class="navbar navbar-expand navbar-dark bg-dark m-0 p-0">
+      <a class="navbar-brand btn wbdv-close bg-dark"
+         [routerLink]="['/table/courses']">
+        X
+      </a>
+      <div class="d-none d-md-block">
+        <h6 class="navbar-brand wbdv-label wbdv-course-title m-0 p-0">
+          {{course?.title}}</h6>
+      </div>
+    </nav>
+    <div class="row min-vh-100">
+      <div class="col-lg-3 col-md-4 col-sm-5 border-top border-bottom border-secondary min-vh-100">
+        <app-module-list></app-module-list>
+      </div>
+      <div class="col-lg-9 col-md-8 col-sm-7 bg-white min-vh-100">
+        <app-lesson-tabs></app-lesson-tabs>
+      </div>
     </div>
   </div>
 </main>
