@@ -11,6 +11,7 @@ export class CourseTableComponent implements OnInit {
   courses = [];
   courseId = '';
 
+
   constructor(private activatedRoute: ActivatedRoute,
               private courseService: CourseServiceClient) {
   }
