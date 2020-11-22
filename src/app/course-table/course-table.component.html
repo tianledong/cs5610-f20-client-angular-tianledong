@@ -3,10 +3,12 @@
   <ul class="nav nav-pills nav-fill wbdv-module-list">
     <li *ngFor="let course of courses"
         class="nav-item nav-link d-flex w-100 m-2 wbdv-bg wbdv-module-item">
-      <a class="col-12 wbdv-module-item-title text-left wbdv-module-item-title"
+      <a class="btn col-10 wbdv-module-item-title text-left wbdv-module-item-title"
          [routerLink]="['/table/courses',course._id,'modules']">
         {{course.title}}
       </a>
+      <a class="btn col-2"
+         routerLink="/courses/{{course._id}}/quizzes">Quizzes</a>
     </li>
   </ul>
 </div>

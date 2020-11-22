@@ -10,6 +10,9 @@ import {CourseServiceClient} from '../services/CourseServiceClient';
 import {LessonServiceClient} from '../services/LessonServiceClient';
 import {ModuleServiceClient} from '../services/ModuleServiceClient';
 import {CourseTableComponent} from './course-table/course-table.component';
+import {QuizzesComponent} from './quizzes/quizzes.component';
+import {QuizzesServiceClient} from '../services/quiz.service.client';
+import {QuestionsServiceClient} from '../services/question.service.client';
 
 
 @NgModule({
@@ -23,12 +26,15 @@ import {CourseTableComponent} from './course-table/course-table.component';
     CourseViewerComponent,
     ModuleListComponent,
     LessonTabsComponent,
+    QuizzesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [CourseServiceClient, LessonServiceClient, ModuleServiceClient],
+  providers: [CourseServiceClient, LessonServiceClient, ModuleServiceClient, QuizzesServiceClient,
+    QuestionsServiceClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
