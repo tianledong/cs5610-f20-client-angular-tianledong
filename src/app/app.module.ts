@@ -13,6 +13,8 @@ import {CourseTableComponent} from './course-table/course-table.component';
 import {QuizzesComponent} from './quizzes/quizzes.component';
 import {QuizzesServiceClient} from '../services/quiz.service.client';
 import {QuestionsServiceClient} from '../services/question.service.client';
+import { QuizComponent } from './quiz/quiz.component';
+import { TrueFalseQuestionComponent } from './true-false-question/true-false-question.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import {QuestionsServiceClient} from '../services/question.service.client';
     ModuleListComponent,
     LessonTabsComponent,
     QuizzesComponent,
+    QuizComponent,
+    TrueFalseQuestionComponent,
   ],
   imports: [
     BrowserModule,
