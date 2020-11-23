@@ -12,11 +12,14 @@ export class MultipleChoiceQuestionComponent implements OnInit {
   @Input()
   question = {_id: '', title: '', question: '', choices: [], correct: '', answer: ''};
   grading = false;
+  isRightAnswer;
+  answer = '';
   faCheck = faCheck;
   faTimes = faTimes;
 
   grade = () => {
     this.grading = true;
+    this.isRightAnswer = (this.answer === this.question.correct);
   }
 
   constructor() {
