@@ -5,10 +5,14 @@
       <a routerLink="/courses/{{courseId}}/quizzes/{{quiz._id}}">
         {{quiz.title}}
       </a>
+
       <a class="btn btn-primary float-right"
          routerLink="/courses/{{courseId}}/quizzes/{{quiz._id}}">
         Start
       </a>
+      <p *ngFor="let attempt of quiz.attempts; index as i">
+        Attempt {{i}} :{{attempt.score}}
+      </p>
     </li>
   </ul>
 </div>

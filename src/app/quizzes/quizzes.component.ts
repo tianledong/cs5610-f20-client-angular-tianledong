@@ -21,6 +21,9 @@ export class QuizzesComponent implements OnInit {
       this.courseId = params.courseId;
       this.service.findAllQuizzes()
         .then(quizzes => this.quizzes = quizzes);
+      this.quizzes.forEach(quiz => {
+        quiz.attempts = this.service.findAttemptsForQuiz(quiz._id);
+      });
     });
   }
 }

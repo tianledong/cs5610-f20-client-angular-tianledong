@@ -13,9 +13,11 @@ export class TrueFalseQuestionComponent implements OnInit {
   question = {_id: '', title: '', question: '', answer: '', correct: ''};
   grading = false;
   isRightAnswer;
-  answer = '';
   faCheck = faCheck;
   faTimes = faTimes;
+
+  @Input()
+  answer = '';
 
   @Output()
   answerChange = new EventEmitter<string>();

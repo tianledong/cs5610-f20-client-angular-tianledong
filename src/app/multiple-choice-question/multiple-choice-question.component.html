@@ -17,7 +17,7 @@
     {{grading && choice === question.correct? 'list-group-item-success': ''}}"
         *ngFor="let choice of question.choices; index as i">
       <label>
-        <input [(ngModel)]="answer" type="radio" value="{{choice}}" name="{{question._id}}"
+        <input (change)="submitAnswer()" [(ngModel)]="answer" type="radio" value="{{choice}}" name="{{question._id}}"
                [disabled]="grading" id="{{question._id}}-{{i}}">
         {{choice}}
       </label>
@@ -34,10 +34,10 @@
     Your Answer: {{answer}}
   </div>
   <br>
-  <div>
-    <button [hidden]="grading" (click)="grade()" class="btn btn-success">
-      Grade
-    </button>
-  </div>
-  <br>
+<!--  <div>-->
+<!--    <button [hidden]="grading" (click)="grade()" class="btn btn-success">-->
+<!--      Grade-->
+<!--    </button>-->
+<!--  </div>-->
+<!--  <br>-->
 </div>

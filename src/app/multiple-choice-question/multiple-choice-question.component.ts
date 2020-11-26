@@ -13,9 +13,11 @@ export class MultipleChoiceQuestionComponent implements OnInit {
   question = {_id: '', title: '', question: '', choices: [], correct: '', answer: ''};
   grading = false;
   isRightAnswer;
-  answer = '';
   faCheck = faCheck;
   faTimes = faTimes;
+
+  @Input()
+  answer = '';
 
   @Output()
   answerChange = new EventEmitter<string>();
