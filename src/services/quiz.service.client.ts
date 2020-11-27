@@ -8,6 +8,6 @@ export class QuizzesServiceClient {
     fetch(`http://localhost:3000/api/quizzes/${qid}`)
       .then(response => response.json())
   findAttemptsForQuiz = (qId) =>
-    fetch(`http://localhost:3000/${qId}/attempts`)
+    fetch(`http://localhost:3000/api/quizzes/${qId}/attempts`)
       .then(response => response.json())
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {QuizzesServiceClient} from '../../services/quiz.service.client';
 
@@ -20,10 +20,12 @@ export class QuizzesComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.courseId = params.courseId;
       this.service.findAllQuizzes()
-        .then(quizzes => this.quizzes = quizzes);
-      this.quizzes.forEach(quiz => {
-        quiz.attempts = this.service.findAttemptsForQuiz(quiz._id);
-      });
+        .then(quizzes => this.quizzes = quizzes)
+        .then(quizzes =>
+          this.quizzes.forEach(quiz => {
+        this.service.findAttemptsForQuiz(quiz._id)
+          .then(attempts => quiz.attempts = attempts);
+      }));
     });
   }
 }

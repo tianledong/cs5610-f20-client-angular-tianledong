@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {QuestionsServiceClient} from '../../services/question.service.client';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-quiz',
@@ -10,7 +11,7 @@ import {QuestionsServiceClient} from '../../services/question.service.client';
 export class QuizComponent implements OnInit {
 
   constructor(private questionsServiceClient: QuestionsServiceClient,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute, private location: Location) {
   }
 
   quizId = '';
@@ -24,7 +25,7 @@ export class QuizComponent implements OnInit {
         'content-type': 'application/json'
       }
     }).then(response => response.json())
-      .then(result => console.log(result));
+      .then(result => this.location.back());
   }
 
 
