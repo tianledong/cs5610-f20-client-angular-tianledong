@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 
-const url = 'http://cs5610-f20-server-node-tianled.herokuapp.com/api/quizzes';
+const url = 'https://cs5610-f20-server-node-tianled.herokuapp.com/api/quizzes';
 @Injectable()
 export class QuizzesServiceClient {
   findAllQuizzes = () =>
